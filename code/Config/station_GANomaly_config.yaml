@@ -1,0 +1,30 @@
+experiment_name : 'GANomaly_station_final'
+dataroot :        "../Datasets/station"
+experiment_path : "./Experiments/GANomaly/station"
+checkpoint_save : "./Experiments/GANomaly/station/checkpoint"
+checkpoint_load : "../checkpoint/GANomaly/Station/512_0.84/checkpoint_best.pt"
+log_path :        "./Experiments/GANomaly/station/GANomaly_station.log"
+start_epoch : 1
+finish_epoch : 300
+manualseed : 42
+
+batchSize : 64
+imageSize_h : 86
+imageSize_w : 64
+nc : 3
+nz : 512
+ngf : 64
+n_extra_layers : 0
+
+device : 'gpu'
+gpu_ids : 0
+ngpu : 1
+
+lr : 0.0005
+b1 : 0.5
+b2 : 0.999
+w_adv : 1
+w_con : 30
+w_enc : 1
+reset_disc_value : 1e-5
+sample_interval : 50
